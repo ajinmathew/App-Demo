@@ -25,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getUserName=etUserName.getText().toString();
                 getPassword=etPassword.getText().toString();
-                Toast.makeText( getApplicationContext(),getUserName+" "+getPassword,Toast.LENGTH_SHORT).show();
-
-
+                if(getUserName.equals( "Admin" )&&getPassword.equals( "12345" )){
+                    Toast.makeText( getApplicationContext(), "Login Sucess",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText( getApplicationContext(),"Login Failed",Toast.LENGTH_SHORT).show();
+                }
             }
         } );
     }
