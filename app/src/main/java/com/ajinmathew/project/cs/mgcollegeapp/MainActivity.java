@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etUserName,etPassword;
     Button btnLogin;
+    String getUserName,getPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -22,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText( getApplicationContext(),"Ajin",Toast.LENGTH_LONG ).show();
+                getUserName=etUserName.getText().toString();
+                getPassword=etPassword.getText().toString();
+                Toast.makeText( getApplicationContext(),getUserName,Toast.LENGTH_SHORT).show();
+                Toast.makeText( getApplicationContext(),getPassword,Toast.LENGTH_LONG ).show();
+
             }
         } );
     }
